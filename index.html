@@ -10,13 +10,31 @@
        </div>    
                        
        <script>    
-           function isMobileDevice() {    
-              document.write("Orientation: " + window.orientation);    
-              document.write("<br>");    
-              document.write("User agent: " + navigator.userAgent);    
-              document.write("<br>");    
-              document.write("Screen width: " + screen.width);    
-              document.write("<br>");    
+           function isMobileDevice() {   
+              //var ratio = window.devicePixelRatio || 1;
+			  //document.write("Ratio: " + ratio);
+			  //document.write("<br>");  			  
+              //document.write("Orientation: " + window.orientation);    
+              //document.write("<br>");    
+              //document.write("User agent: " + navigator.userAgent);    
+              //document.write("<br>");    
+              //document.write("Screen width: " + screen.width * ratio);    
+              //document.write("<br>");
+			  if (navigator.userAgent.match("Mobi")) {
+			      document.write("Is mobile device: true");
+				  document.write("<br>");
+				  return true;
+		      } else {
+				  var ratio = window.devicePixelRatio || 1;
+				  if (Math.min(screen.width, screen.height) * ratio < 1024) {
+					  document.write("Is mobile device: true");
+					  document.write("<br>");
+				      return true;
+				  }	  
+			  }
+			  document.write("Is mobile device: false");
+			  document.write("<br>");
+			  return false;
            };    
        </script>    
    </body>    
