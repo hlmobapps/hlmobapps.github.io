@@ -7,7 +7,7 @@ return(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|el
 }
 	
 function insufficientSpace() {
-return (isOnMobilePhone() || screen.width < 1024);
+return (isOnMobilePhone() || Math.max(screen.width, screen.height) < 1024);
 }
 
 function myFunction() {
