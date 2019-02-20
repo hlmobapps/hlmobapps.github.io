@@ -11,7 +11,7 @@ return (isOnMobilePhone() || Math.max(screen.width, screen.height) < 1024);
 }
 
 function myFunction() {
-	document.getElementById("demo1").innerHTML = "screen width: " + screen.width.toString() + "<br>" +
+	document.getElementById("demo1").innerHTML = "screen size: " + screen.width.toString() + "x" + screen.height.toString() + "<br>" +
 	"devicePixelRatio: " + window.devicePixelRatio.toString() + "<br>" +
 	"userAgent: " + navigator.userAgent;
 	document.getElementById("demo2").innerHTML = "isOnMobilePhone(): " + isOnMobilePhone().toString();
