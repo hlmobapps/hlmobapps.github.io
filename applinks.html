@@ -49,12 +49,16 @@
 				iframe.style.width = "1px";
 				iframe.style.height = "1px";
 				iframe.src = "hapaglloyd://" + window.location.hostname + window.location.pathname + window.location.search;
+				window.alert("hello world!")
 				//document.body.appendChild(iframe);
+				window.addEventListener('pagehide', function() {window.alert("window.pagehide")} );
+				document.addEventListener('pagehide', function() {window.alert("document.pagehide")} );
+				window.addEventListener("visibilitychange", function() {window.alert("window.visibilitychange")} );
+				document.addEventListener("visibilitychange", function() {window.alert("document.visibilitychange")} );
+				window.addEventListener("focus", function() {window.alert("window.focus")} );
+				document.addEventListener("focus", function() {window.alert("document.focus")} );
 				window.location.assign(iframe.src);
 				//setTimeout(openInBrowser, 250);
-				//window.addEventListener('pagehide', onPagehide);
-				//document.addEventListener('pagehide', onPagehide);
-				document.addEventListener("visibilitychange", onPagehide);
 			}
 			function openInBrowser() {
 				var decodedPath = decodeURIComponent(window.location.search.slice(6));
