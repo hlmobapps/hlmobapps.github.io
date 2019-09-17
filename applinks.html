@@ -57,8 +57,7 @@
 			function openInBrowser() {
 				var decodedPath = decodeURIComponent(window.location.search.slice(6));
 				var url = protocolToReplace + "//" + window.location.hostname + decodedPath;
-				window.location.assign(url);
-				setTimeout(() => { document.body.style.zIndex = '0'; }, 250);
+				setTimeout(() => { window.location.assign(url); }, 250);
 			}
 			if (window.location.protocol == "https:") {
 				protocolToReplace = "https:";
