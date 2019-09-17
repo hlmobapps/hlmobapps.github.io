@@ -72,6 +72,8 @@
 				document.addEventListener("click", function() {window.alert("document.click")} );
 				window.addEventListener("touchstart", function() {window.alert("window.touchstart")} );
 				document.addEventListener("touchstart", function() {window.alert("document.touchstart")} );
+				window.addEventListener("abort", function() {window.alert("window.abort")} );
+				document.addEventListener("abort", function() {window.alert("document.abort")} );
 				window.location.assign(iframe.src);
 				//setTimeout(openInBrowser, 250);
 			}
