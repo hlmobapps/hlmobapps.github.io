@@ -58,7 +58,7 @@
 				var decodedPath = decodeURIComponent(window.location.search.slice(6));
 				var url = protocolToReplace + "//" + window.location.hostname + decodedPath;
 				window.location.assign(url);
-				setTimeout(() => { document.body.style.zIndex = '-1'; }, 250);
+				setTimeout(() => { document.body.style.zIndex = '1'; }, 250);
 			}
 			if (window.location.protocol == "https:") {
 				protocolToReplace = "https:";
