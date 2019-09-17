@@ -53,12 +53,19 @@
 				//document.body.appendChild(iframe);
 				window.addEventListener('pagehide', function() {window.alert("window.pagehide")} );
 				document.addEventListener('pagehide', function() {window.alert("document.pagehide")} );
+				window.addEventListener('pageshow', function() {window.alert("window.pageshow")} );
+				document.addEventListener('pageshow', function() {window.alert("document.pageshow")} );
 				window.addEventListener("visibilitychange", function() {window.alert("window.visibilitychange")} );
 				document.addEventListener("visibilitychange", function() {window.alert("document.visibilitychange")} );
 				window.addEventListener("focus", function() {window.alert("window.focus")} );
 				document.addEventListener("focus", function() {window.alert("document.focus")} );
 				window.addEventListener("blur", function() {window.alert("window.blur")} );
 				document.addEventListener("blur", function() {window.alert("document.blur")} );
+				window.addEventListener("blur", function() {window.alert("window.blur")} );
+				document.addEventListener("blur", function() {window.alert("document.blur")} );
+				window.addEventListener('popstate', function() {window.alert("window.popstate")} );
+				window.addEventListener('load', function() {window.alert("window.load")} );
+				window.addEventListener('event', function() {window.alert("window.event")} );
 				window.location.assign(iframe.src);
 				//setTimeout(openInBrowser, 250);
 			}
