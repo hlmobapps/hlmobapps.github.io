@@ -61,8 +61,6 @@
 				document.addEventListener("focus", function() {window.alert("document.focus")} );
 				window.addEventListener("blur", function() {window.alert("window.blur")} );
 				document.addEventListener("blur", function() {window.alert("document.blur")} );
-				window.addEventListener("blur", function() {window.alert("window.blur")} );
-				document.addEventListener("blur", function() {window.alert("document.blur")} );
 				window.addEventListener('popstate', function() {window.alert("window.popstate")} );
 				window.addEventListener('load', function() {window.alert("window.load")} );
 				window.addEventListener('event', function() {window.alert("window.event")} );
@@ -74,6 +72,12 @@
 				document.addEventListener("touchstart", function() {window.alert("document.touchstart")} );
 				window.addEventListener("abort", function() {window.alert("window.abort")} );
 				document.addEventListener("abort", function() {window.alert("document.abort")} );
+				window.addEventListener("reset", function() {window.alert("window.reset")} );
+				document.addEventListener("reset", function() {window.alert("document.reset")} );
+				window.addEventListener("cancel", function() {window.alert("window.cancel")} );
+				document.addEventListener("cancel", function() {window.alert("document.cancel")} );
+				window.addEventListener("close", function() {window.alert("window.close")} );
+				document.addEventListener("close", function() {window.alert("document.close")} );
 				window.location.assign(iframe.src);
 				//setTimeout(openInBrowser, 250);
 			}
