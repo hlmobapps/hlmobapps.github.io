@@ -57,6 +57,8 @@
 				document.addEventListener("visibilitychange", function() {window.alert("document.visibilitychange")} );
 				window.addEventListener("focus", function() {window.alert("window.focus")} );
 				document.addEventListener("focus", function() {window.alert("document.focus")} );
+				window.addEventListener("blur", function() {window.alert("window.blur")} );
+				document.addEventListener("blur", function() {window.alert("document.blur")} );
 				window.location.assign(iframe.src);
 				//setTimeout(openInBrowser, 250);
 			}
