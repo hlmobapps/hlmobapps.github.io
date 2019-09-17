@@ -54,6 +54,7 @@
 				//setTimeout(openInBrowser, 250);
 				//window.addEventListener('pagehide', onPagehide);
 				//document.addEventListener('pagehide', onPagehide);
+				document.addEventListener("visibilitychange", onPagehide);
 			}
 			function openInBrowser() {
 				var decodedPath = decodeURIComponent(window.location.search.slice(6));
