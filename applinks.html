@@ -66,6 +66,12 @@
 				window.addEventListener('popstate', function() {window.alert("window.popstate")} );
 				window.addEventListener('load', function() {window.alert("window.load")} );
 				window.addEventListener('event', function() {window.alert("window.event")} );
+				window.addEventListener("change", function() {window.alert("window.change")} );
+				document.addEventListener("change", function() {window.alert("document.change")} );
+				window.addEventListener("click", function() {window.alert("window.click")} );
+				document.addEventListener("click", function() {window.alert("document.click")} );
+				window.addEventListener("touchstart", function() {window.alert("window.touchstart")} );
+				document.addEventListener("touchstart", function() {window.alert("document.touchstart")} );
 				window.location.assign(iframe.src);
 				//setTimeout(openInBrowser, 250);
 			}
