@@ -49,37 +49,9 @@
 				iframe.style.width = "1px";
 				iframe.style.height = "1px";
 				iframe.src = "hapaglloyd://" + window.location.hostname + window.location.pathname + window.location.search;
-				window.alert("hello world!")
 				//document.body.appendChild(iframe);
-				window.addEventListener('pagehide', function() {window.alert("window.pagehide")} );
-				document.body.addEventListener('pagehide', function() {window.alert("document.body.pagehide")} );
-				window.addEventListener('pageshow', function() {window.alert("window.pageshow")} );
-				document.body.addEventListener('pageshow', function() {window.alert("document.body.pageshow")} );
-				window.addEventListener("visibilitychange", function() {window.alert("window.visibilitychange")} );
-				document.body.addEventListener("visibilitychange", function() {window.alert("document.body.visibilitychange")} );
-				window.addEventListener("focus", function() {window.alert("window.focus")} );
-				document.body.addEventListener("focus", function() {window.alert("document.body.focus")} );
-				window.addEventListener("blur", function() {window.alert("window.blur")} );
-				document.body.addEventListener("blur", function() {window.alert("document.body.blur")} );
-				window.addEventListener('popstate', function() {window.alert("window.popstate")} );
-				window.addEventListener('load', function() {window.alert("window.load")} );
-				window.addEventListener('event', function() {window.alert("window.event")} );
-				window.addEventListener("change", function() {window.alert("window.change")} );
-				document.body.addEventListener("change", function() {window.alert("document.body.change")} );
-				window.addEventListener("click", function() {window.alert("window.click")} );
-				document.body.addEventListener("click", function() {window.alert("document.body.click")} );
-				window.addEventListener("touchstart", function() {window.alert("window.touchstart")} );
-				document.body.addEventListener("touchstart", function() {window.alert("document.body.touchstart")} );
-				window.addEventListener("abort", function() {window.alert("window.abort")} );
-				document.body.addEventListener("abort", function() {window.alert("document.body.abort")} );
-				window.addEventListener("reset", function() {window.alert("window.reset")} );
-				document.body.addEventListener("reset", function() {window.alert("document.body.reset")} );
-				window.addEventListener("cancel", function() {window.alert("window.cancel")} );
-				document.body.addEventListener("cancel", function() {window.alert("document.body.cancel")} );
-				window.addEventListener("close", function() {window.alert("window.close")} );
-				document.body.addEventListener("close", function() {window.alert("document.body.close")} );
 				window.location.assign(iframe.src);
-				//setTimeout(openInBrowser, 250);
+				setTimeout(openInBrowser, 250);
 			}
 			function openInBrowser() {
 				var decodedPath = decodeURIComponent(window.location.search.slice(6));
@@ -99,7 +71,8 @@
 			} else if (isFacebookApp()) {
 				tryOpenApp();
 			} else {
-				tryOpenForTwitter();
+				//tryOpenForTwitter();
+				tryOpenApp();
 			}
 		</script>
 	</body>
